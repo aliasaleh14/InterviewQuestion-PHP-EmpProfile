@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add Employee</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <form id="employeeForm" method="POST" action="../api/submit.php">
+    <h2>Add New Employee</h2>
+
+    <label>Employee Name</label>
+    <input name="name" required />
+
+    <label>Gender</label>
+    <select name="gender" required>
+      <option value="">-- Select Gender --</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+
+    <label>Marital Status</label>
+    <input name="marital_status" />
+
+    <label>Phone Number</label>
+    <div style="display: flex; gap: 8px;">
+      <input name="country_code" placeholder="+60" required style="width: 80px;" />
+      <input name="phone" placeholder="1234567890" required />
+    </div>
+    <small>Format: +60 and 9–10 digit number</small>
+
+    <label>Email</label>
+    <input name="email" type="email" required />
+
+    <label>Address</label>
+    <textarea name="address"></textarea>
+
+    <label>Date of Birth</label>
+    <input type="date" name="dob" required />
+
+    <label>Nationality</label>
+    <input name="nationality" />
+
+    <label>Hire Date</label>
+    <input type="date" name="hire_date" required />
+
+    <label>Department</label>
+    <input name="department" />
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="validation.js" defer></script>
+</body>
+</html>
